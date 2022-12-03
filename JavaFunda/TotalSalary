@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main{
+   public static void main(String[] args){
+      Scanner s = new Scanner(System.in);
+      int a = s.nextInt();
+      String str = s.next();
+      char c = str.charAt(0);
+      double Bs =(0.2*a)+(0.5*a)-(0.11*a)+a;
+      if(c=='A'){
+          Bs=Bs+1700;
+      }
+      else if(c=='B'){
+          Bs=Bs+1500;
+      }
+      else{
+          Bs=Bs+1300;
+      }
+      
+      System.out.println(Math.round(Bs));
+  }
+}
