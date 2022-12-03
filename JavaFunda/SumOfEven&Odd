@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int es=0;
+        int os=0;
+        
+        while(n!=0){
+        int x =n%10;
+        if(x%2==0){
+             es=es+x;
+        }else{
+             os=os+x;
+        }
+          n=n/10;
+        }
+        System.out.print(es+" "+os);
+    }
+}
