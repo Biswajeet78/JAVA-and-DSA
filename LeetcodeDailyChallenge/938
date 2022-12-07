@@ -1,0 +1,19 @@
+class Solution{
+//Taking a global int to store the sum
+int sum=0;
+//travesal the tree and use the property of the binary search tree, i.e, inorder traveral of tree would give you the sorted data
+public int rangeSumBST(TreeNode root, int low, int high){
+if(root==null)
+return 0;
+if(root.val>=low&&root.val<=high){
+sum+=root.val;
+rangeSumBST(root.left,low,high);
+rangeSumBST(root.right,low,high);
+}
+if(root.val<low)
+rangeSumBST(root.right,low,high);//only right because root val is low so left is always smaller and we can neglect it
+else if(root.val>high)
+rangeSumBST(root.left,low,high);//only left because root val is low so right is always higher and wecan neglect it
+return sum;
+}
+}
