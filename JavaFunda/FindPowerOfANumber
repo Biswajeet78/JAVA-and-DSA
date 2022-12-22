@@ -1,18 +1,11 @@
-import java.util.Scanner;
-public class Solution{
-    public static void main(String[] args){
+import java.util.*;
+import java.io.*;
+class Solution{
+    public static void main(String args[]){
         Scanner s = new Scanner(System.in);
-        int a=1, b=1;
-        int x =s.nextInt();
-        int n =s.nextInt();
-        for(n==0 && x==0){
-           System.out.print(b);
-        }else{
-         while(n>0){
-             a=a*x;
-             n--;
-         }
-         system.out.println(a);
-        }
-   }
+        int N = s.nextInt();
+        int x = s.nextInt();
+        int a = (int)Math.pow(N,x);
+        System.out.println(a);
+    }
 }
